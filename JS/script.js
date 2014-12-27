@@ -2,6 +2,7 @@ function outputData(){
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', 'data.json');
 	xhr.onreadystatechange  = function() {
+		console.log(this);
 		if(this.readystate == 4){
 			for(var headline of this.response.headlines){
 				var temp = headlineTemp.content.cloneNode(true);

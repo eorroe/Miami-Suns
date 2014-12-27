@@ -2,8 +2,7 @@ function outputData(){
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', 'data.json');
 	xhr.onreadystatechange  = function() {
-		console.log(this);
-		if(this.readystate == 4){
+		if(this.readyState == 4 && this.status == 200){
 			for(var headline of this.response.headlines){
 				var temp = headlineTemp.content.cloneNode(true);
 				temp.querySelector('span').innerText = headline.date;

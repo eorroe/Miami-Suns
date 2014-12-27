@@ -1,0 +1,146 @@
+html, body, .nav{
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100%;
+	width: 100%;
+}
+body{
+	background-color: #FFD54F;
+}
+a{
+	color: gold;
+	text-decoration: none;
+	cursor: pointer;
+}
+section a:hover, .headlines a:hover{
+	color: orange;
+	text-shadow: 1px 1px yellow;
+}
+.nav{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	font-size: 30px;
+	display: flex;
+	background-color: #FFC107;
+	box-shadow: 0 5px 3px #171717;
+	z-index: 10;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.nav-item{
+	flex: 1 1 auto;
+	display: block;
+	text-align: center;
+	outline: none;
+	-webkit-transition: background-color 0.5s ease-in-out;;
+	-o-transition: background-color 0.5s ease-in-out;;
+	transition: background-color 0.5s ease-in-out;;
+}
+.nav-item:hover, .active-nav, .headlines, footer{
+	background-color: #171717;
+}
+.nav-link{
+	color: white;
+	display: block;
+}
+.logo{
+	position: relative;
+	top: 40px;
+	-webkit-filter: contrast(2) brightness(130%);
+	-o-filter: contrast(2) brightness(130%);
+	filter: contrast(2) brightness(130%);
+	z-index: 1;
+}
+.champs{
+	position: absolute;
+	top: 38px;
+	right: 0;
+	z-index: 1;
+}
+.champs img{
+	transition: transform 0.5s ease-out;
+	transform: translateY(-90%);
+}
+.champs img:hover{
+	transform: translateY(0);
+}
+.headlines{
+	position: absolute;
+	top: 70%;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	height: 100%;
+	padding: 12px;
+	line-height: 20px;
+	border-radius: 20px 0 0 20px;
+}
+.headline{
+	flex: 1;
+}
+.headline-date{
+	display: block;
+	color: #777;
+}
+.headline-link{
+	color: gold;
+}
+section{
+	display: flex;
+	flex-flow: column nowrap;
+	position: relative;
+	margin: 0 auto;
+	padding: 10px;
+	width: 60%;
+	background: white;
+	border-radius: 10px;
+}
+article{
+	text-align: center;
+}
+article img{
+	border-radius: 5px;
+	width: 100%;
+}
+footer{
+	position: relative;
+	top: 20px;
+	height: 135px;
+	padding: 5px 0;
+	color: white;
+}
+.footer-logo, .copyright{
+	float: left;
+}
+.copyright span{
+	display: block;
+}
+.follow{
+	float: right;
+}
+::selection{
+	background-color: black;
+	color: gold;
+}
+::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar, ::-webkit-scrollbar-track{
+	background: black;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: gold;
+}

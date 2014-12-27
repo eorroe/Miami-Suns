@@ -5,8 +5,8 @@ xhr.onreadystatechange  = function() {
 }
 xhr.send();
 
-function outputData(){
-	for(var headline of this.response.headlines){
+function outputData(data){
+	for(var headline of data.headlines){
 		var temp = headlineTemp.content.cloneNode(true);
 		temp.querySelector('span').innerText = headline.date;
 		var link = temp.querySelector('a');
@@ -14,7 +14,7 @@ function outputData(){
 		link.innerText = headline.text;
 		document.querySelector('.headlines').appendChild(temp);
 	}
-	for(var article of this.response.articles){
+	for(var article of data.articles){
 		var temp = articleTemp.content.cloneNode(true);
 		var link = temp.querySelector('.article-link');
 		link.href = article.url;
